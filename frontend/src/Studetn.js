@@ -28,6 +28,7 @@ function Studetn() {
         <table className="table">
           <thead>
             <tr>
+              <th></th>
               <th>Name</th>
               <th>Email</th>
             </tr>
@@ -36,6 +37,9 @@ function Studetn() {
             {students.map((student, idx) => {
               return (
                 <tr key={`s_${idx}`}>
+                  <td>
+                    <input type="radio" name="user" value={student.id} />
+                  </td>
                   <td>{student.Name}</td>
                   <td>{student.Email}</td>
                 </tr>

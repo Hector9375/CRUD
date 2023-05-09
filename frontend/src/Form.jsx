@@ -15,8 +15,8 @@ export default function Form({ close }) {
   function save() {
     axios
       .post("http://localhost:8080", {
-        name: formName,
-        email: formEmail,
+        Name: formName,
+        Email: formEmail,
       })
       .then((res) => {
         console.log(res);
