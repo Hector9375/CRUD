@@ -8,8 +8,6 @@ const {
     deleteStudent
 } = require('../repository/crud');
 
-router.route('/:id').post(createStudent).patch(updateStudent).delete(deleteStudent);
-
 router.get('/',getStudent)
 router.post('/',createStudent);
 router.patch('/:id',updateStudent);

@@ -4,8 +4,8 @@ const app = express();
 const crud = require('./routes/crud');
 
 app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
-
-app.use('/',crud)
+app.use(express.json())
+app.use('/',crud);
 
 
 const port = 8080;
