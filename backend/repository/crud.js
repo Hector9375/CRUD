@@ -1,7 +1,7 @@
 const db = require('../db/connection');
 
 const createStudent = (req, res) => {
-    let sql = `INSERT INTO student(Name, Email) VALUES(${req.body.Name}','${req.body.Email}')`;
+    let sql = `INSERT INTO student(Name, Email) VALUES('${req.body.Name}','${req.body.Email}')`;
     db((conn) => {
         conn.query(sql,(err, result, fileds) => {
             if(!err) {
@@ -25,7 +25,7 @@ const getStudent = (req, res) => {
 }
 
 const updateStudent = (req, res) => {
-    let sql = `UPDATE student SET WHERE id = ${req.params.id}`;
+    let sql = `UPDATE student SET Name='${req.body.Name}',Email='${req.body.Email}' WHERE id = ${req.params.id}`;
     db((conn) => {
         conn.query(sql,(err, result, fileds) => {
             if(!err) {
