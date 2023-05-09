@@ -1,7 +1,7 @@
 const db = require('../db/connection');
 
 const createStudent = (req, res) => {
-    let sql = `INSERT INTO student(id, Name, Email) VALUES(${req.body.Name}','${req.body.Email}')`;
+    let sql = `INSERT INTO student(Name, Email) VALUES(${req.body.Name}','${req.body.Email}')`;
     db((conn) => {
         conn.query(sql,(err, result, fileds) => {
             if(!err) {
